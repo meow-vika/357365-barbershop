@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Барбершоп «Бородинский»</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -16,7 +16,9 @@
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="login">Вход</li>
+          <li class="login">
+          <a class="login" href="login.html">Вход</a>
+          </li>
         </ul>
 
 <a class="main-header-logo">
@@ -83,8 +85,8 @@
   <a href="#"><img src="img/interior.jpg" width="286" height="164" alt="Салон"></a>
 </figure>
 
-<div class="button gallery-button gallery-button-back">Назад</div>
-<div class="button gallery-button gallery-button-next">Вперед</div>
+<button class="button gallery-button gallery-button-back" type="button">Назад</button>
+<button class="button gallery-button gallery-button-next" type="button">Вперед</button>
 
     
   </section>
@@ -114,20 +116,20 @@
 
 <form class="appointment-form" method="post">
 <div class="appointment-item">
-<label>Дата</label>
-  <input type="text" name="date" placeholder="08.10.2017">
+<label for="appointment-date">Дата</label>
+  <input id="appointment-date" type="text" name="date" placeholder="08.10.2017">
   </div>
   <div class="appointment-item">
-  <label>Время</label>
-  <input type="text" name="time" placeholder="10:00">
+  <label for="appointment-time">Время</label>
+  <input id="appointment-time" type="text" name="time" placeholder="10:00">
   </div>
   <div class="appointment-item">
-  <label>Ваше имя</label>
-  <input type="text" name="name" placeholder="Борода">
+  <label for="appointment-name">Ваше имя</label>
+  <input id="appointment-name" type="text" name="name" placeholder="Борода">
   </div>
   <div class="appointment-item">
-  <label>Телефон</label>
-  <input type="tel" name="phone" placeholder="+7 123 456-78-90">
+  <label for="appointment-phone">Телефон</label>
+  <input id="appointment-phone" type="tel" name="phone" placeholder="+7 123 456-78-90">
   </div>
 
 <button class="button" type="submit">Отправить</button>
@@ -156,6 +158,38 @@
     </p>
   </footer>
 
+  <section class="modal modal-login">
+  <h2>Личный кабинет</h2>
+  <p>Введите пожалуйста свой логин и пароль</p>
+  <form class="login-form" method="post">
+    <div class="login-item">
+      <label for="user-login" class="visually-hidden">Логин</label>
+      <input id="user-login" class="login-user" type="text" name="login" placeholder="Логин">
+    </div>
+    <div class="login-item">
+      <label for="user-password" class="visually-hidden">Пароль</label>
+      <input id="user-password" class="login-password" type="text" name="password">
+    </div>
+    <div class="login-password-info">
+      <label class="login-checkbox">
+            <input type="checkbox" name="remember" class="visually-hidden">
+            <span class="checkbox-indicator"></span>
+            Запомните меня
+          </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+    </div>
+    <button class="button" type="submit">Войти</button>
+  </form>
+  <button class="model-close" type="button">Закрыть</button>
+  </section>
+
+<section class="modal modal-map">
+  <h2 class="visually-hidden">Как до нас добраться</h2>
+  <div class="modal-map-item">
+    <img src="img/map.png" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+  </div>
+  <button class="model-close" type="button">Закрыть</button>
+</section>
 
 </body>
 </html>
