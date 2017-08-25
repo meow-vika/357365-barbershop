@@ -5,11 +5,11 @@
   <meta charset="utf-8">
   <title>Барбершоп «Бородинский»</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 
-<body>
+<body class="inner-page">
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
@@ -23,14 +23,14 @@
         <li><a href="contacts.html">Контакты</a></li>
       </ul>
       <ul class="user-navigation">
-        <li class="login">Вход</li>
+        <li><a class="login-link" href="login.html">Вход</a></li>
       </ul>
     </nav>
 
   </header>
 
   <main class="container">
-    <h1>Прайс-лист</h1>
+    <h1 class="page-title">Прайс-лист</h1>
 
     <ul class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
@@ -61,7 +61,7 @@
 
       <h2>Цены на услуги<br>наших мастеров</h2>
 
-      <table border="1px solid black">
+      <table border="2">
         <tr>
           <td>Стрижка</td>
           <td>1 500 ₽</td>
@@ -99,6 +99,31 @@
       <b>Разработано:</b> <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
     </p>
   </footer>
+
+  <section class="modal modal-login">
+    <h2>Личный кабинет</h2>
+    <p>Введите пожалуйста свой логин и пароль</p>
+    <form class="login-form" method="post">
+      <div class="login-item">
+        <label for="user-login" class="visually-hidden">Логин</label>
+        <input id="user-login" class="login-user" type="text" name="login" placeholder="Логин">
+      </div>
+      <div class="login-item">
+        <label for="user-password" class="visually-hidden">Пароль</label>
+        <input id="user-password" class="login-password" type="text" name="password">
+      </div>
+      <div class="login-password-info">
+        <label class="login-checkbox">
+            <input type="checkbox" name="remember" class="visually-hidden">
+            <span class="checkbox-indicator"></span>
+            Запомните меня
+          </label>
+        <a class="restore" href="#">Я забыл пароль!</a>
+      </div>
+      <button class="button" type="submit">Войти</button>
+    </form>
+    <button class="model-close" type="button">Закрыть</button>
+  </section>
 
 </body>
 
